@@ -1,0 +1,22 @@
+name: AdvancedBroadcast
+version: ${project.version}
+main: fr.gohansword.advancedbroadcast.AdvancedBroadcast
+api-version: 1.16
+authors: [ GohanSword ]
+website: SurvivalWorld.fr
+commands:
+  advancedbroadcast:
+    description: main command
+    aliases: [ab]
+  abalert:
+    description: Send Alert Broadcast
+    aliases: [aba]
+  abinformation:
+    description: Send Information Broadcast
+    aliases: [abi]
+  abserver:
+    description: Send Server Broadcast
+    aliases: [abs]
+  abreboot:
+    description: Send Reboot Broadcast
+    aliases: [ abr ]
