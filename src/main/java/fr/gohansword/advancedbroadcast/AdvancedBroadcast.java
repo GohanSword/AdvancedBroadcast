@@ -35,7 +35,7 @@ public final class AdvancedBroadcast extends JavaPlugin {
     public boolean onCommand(CommandSender sender, Command command, String label, String[] args) {
 
         String newLine = System.getProperty("line.separator");
-        String blankline = "&f";
+        String blankline = "&c";
 
         if (label.equalsIgnoreCase("advancedbroadcast")) {
             if (args.length == 0) {
