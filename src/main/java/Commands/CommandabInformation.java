@@ -14,6 +14,18 @@ public class CommandabInformation implements CommandExecutor {
 
     @Override
     public boolean onCommand(CommandSender sender, Command cmd, String label, String[] args) {
+
+        if(!(sender instanceof Player)) {
+            if (args.length == 0) {
+                Bukkit.getConsoleSender().sendMessage(ChatColor.translateAlternateColorCodes('&',
+                        plugin.getConfig().getString("Prefix") + plugin.getConfig().getString("Missing-arg")));
+                return false;
+            }
+            Bukkit.broadcastMessage(ChatColor.translateAlternateColorCodes('&',
+                    plugin.getConfig().getString("Information-Broadcast") + String.join(" ", args)));
+            return false;
+
+        }
         Player player = (Player) sender;
         if (player.hasPermission("advancedbroacast.alert")) {
             if (args.length == 0) {
